@@ -1,0 +1,41 @@
+<ion-view view-title="Share">
+  <ion-content on-swipe-right="goBack()" on-swipe-left="goForward()" has-bouncing="false" >
+    <div class="list list-inset">
+      <div class="item item-divider" align="center">
+        <b> Click To Share This App</b>
+      </div>
+
+          <div class="padding">
+            <button class="button button-block button-royal item-icon-left" ng-click="whatsappShare()">
+                      <i class="icon ion-social-whatsapp"></i>
+                     <b>   WhatsApp</b>
+                </button>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-royal item-icon-left" ng-click="twitterShare()">
+                         <i class="icon ion-social-twitter"></i>
+                     <b>   Twitter</b>
+                </button>
+          </div>
+
+          <div class="padding">
+            <button class="button button-block button-royal item-icon-left" ng-click="facebookShare()">
+                         <i class="icon ion-social-facebook"></i>
+                     <b>Facebook</b>
+                </button>
+          </div>
+
+          <div class="padding">
+           <button class="button button-block button-royal item-icon-left" ng-click="OtherShare()">
+                       <i class="icon ion-android-share-alt"></i>
+                      <b>  Other</b>
+                </button>
+          </div>
+
+
+  
+      
+      </div>
+  </div>
+  </ion-content>
+</ion-view>

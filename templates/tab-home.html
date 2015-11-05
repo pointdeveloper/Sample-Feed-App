@@ -1,0 +1,17 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+<!-- <iframe id="siteFrame" src="http://pointdeveloper.com"></iframe> -->
+<ion-refresher on-refresh="doRefresh()"></ion-refresher>
+<ion-list>
+	<ion-item ng-if="newItems.length > 0" ng-click="doRefresh()">
+		{{newItems.length}} new items
+	</ion-item>
+	<ion-item class="item-avatar" ng-repeat="item in items">
+		<img src="{{item.user.picture.thumbnail}} " />
+		<h2>{{item.user.name.first}} {{item.user.name.last}}</h2>
+		<p>{{item.user.location.city}} {{item.user.password}}</p>
+	</ion-item>
+</ion-list>
+<ion-infinite-scroll on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
